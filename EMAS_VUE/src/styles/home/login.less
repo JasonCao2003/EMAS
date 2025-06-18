@@ -1,0 +1,264 @@
+.homeLogin {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(19, 21, 53, 0.5);
+  backdrop-filter: blur(1px);
+  z-index: 666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // 提示错误窗口
+  .tip {
+    width: 240px;
+    height: 60px;
+    line-height: 60px;
+    opacity: 0.9;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 666;
+
+    span {
+      transition: 0.6s;
+      font-size: 18px;
+      color: #fff;
+      width: 240px;
+      text-align: center;
+      background-color: #333;
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 666;
+      opacity: 0;
+    }
+  }
+
+  // 整体弹窗
+  .shell {
+    width: 892px;
+    height: 520px;
+    position: relative;
+    display: flex;
+
+    // 左侧图片区域
+    .img {
+      width: 330px;
+      height: 520px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    // 用户操作区域
+    .account-login {
+      width: 562px;
+      height: 520px;
+      background-color: #fff;
+      box-shadow: 0px 12px 30px #4749c0;
+      border-radius: 15px;
+      position: relative;
+      justify-content: center;
+      padding: 20px 0;
+
+      // 取消窗口
+      .ucancel {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 45px;
+        position: relative;
+        left: 500px;
+        top: -15px;
+      }
+
+      // 登录导航区域
+      .nav {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+
+        .nav-inp {
+          cursor: pointer;
+          margin: 0 20px;
+          background-color: #fff;
+          border: 0;
+          width: 120px;
+          height: 60px;
+          font-size: 22px;
+          color: #333;
+        }
+
+        .active {
+          color: #4749c0;
+          border-bottom: 2px solid #4749c0;
+        }
+
+        span {
+          font-size: 24px;
+          color: #ddd;
+        }
+      }
+
+      // 文本输入区域
+      .ubody {
+        display: none;
+        margin: 40px 0;
+        height: 120px;
+        position: relative;
+        font-size: 20px;
+
+        #acc-form,
+        #email-form {
+          border-radius: 10px 10px 0 0;
+        }
+
+        #pwd-form,
+        #code-form {
+          border-radius: 0 0 10px 10px;
+          border-top: 0;
+        }
+
+        form {
+          align-content: center;
+          width: 400px;
+          height: 50px;
+          padding: 0 30px;
+          margin: 0 81px;
+          border: 1px solid #999;
+          font-size: 16px;
+
+          div {
+            display: inline-block;
+            width: 80px;
+          }
+
+          input {
+            border: 0;
+            font-size: 16px;
+            width: 180px;
+          }
+
+          input:focus {
+            outline: none;
+          }
+
+          .getCode {
+            font-size: 16px;
+            background-color: #fff;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 0;
+            border-left: 1px solid gray;
+            position: relative;
+            color: #ddd;
+            width: 120px;
+            height: 30px;
+          }
+        }
+
+        .face-form, .voice-form {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          // background-color: #eee;
+          text-align: center;
+
+          #video {
+            position: absolute;
+            width: 160px;
+            transform: translateX(-50%);
+          }
+
+          #canvas {
+            position: absolute;
+            width: 160px;
+            transform: translateX(-50%);
+          }
+
+          #startBtn, #stopBtn {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 20px;
+            width: 240px;
+            height: 40px;
+            background-color: skyblue;
+            border: 0;
+            color: #fff;
+          }
+        }
+      }
+
+      // 选项区域
+      .ufoot {
+        width: 100%;
+        height: 42px;
+        text-align: center;
+
+        button {
+          cursor: pointer;
+          width: 180px;
+          height: 42px;
+          margin: 0 20px;
+          border-radius: 5px;
+          border: 1px solid #999;
+          background-color: #fff;
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        #logBtn {
+          color: #fff;
+          background-color: skyblue;
+          border: 1px solid skyblue;
+        }
+      }
+
+      // 其他方式登录
+      .oth-login {
+        display: grid;
+        place-items: center;
+        /* 水平和垂直居中 */
+        width: 100%;
+        height: 80px;
+        // background-color: pink;
+        text-align: center;
+        color: grey;
+        margin: 20px 0;
+
+        .each-login {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 240px;
+          height: 30px;
+          font-size: 16px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 0 0 20px;
+          }
+
+          .active {
+            color: #4749c0;
+            // border-bottom: 2px solid #4749c0;
+          }
+        }
+      }
+    }
+  }
+}

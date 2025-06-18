@@ -1,0 +1,174 @@
+/* 左侧导航栏整体布局 */
+.nav {
+  position: absolute;
+  transition: 0.8s;
+  background: #F2F6FC no-repeat;
+  padding: 20px 0px 0px 0px;
+  width: 220px;
+  height: 100%;
+  opacity: 0.9;
+  // z-index: 2;
+  border-right: 1px solid #ddd;
+
+  /* 网站logo */
+  .webName {
+    width: 100%;
+    height: 50px;
+    padding: 2px 30px;
+    border-bottom: 3px solid skyblue;
+
+    img {
+      width: 160px;
+      height: 30px;
+      background-color: #fff;
+    }
+  }
+
+  /* 选项卡整体设置 */
+  .selectCard {
+    position: relative;
+    margin: 20px 0px;
+    padding: 0px 20px;
+    background: #F2F6FC;
+    height: 680px;
+    /* 设置背景颜色向右渐变 */
+    background: linear-gradient(to right, skyblue, rgb(67, 148, 255)) no-repeat bottom;
+    background-size: 200px 1px;
+
+    .everyCard {
+      margin: 10px 0px;
+      height: 30px;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 5px;
+
+      /* 设置背景颜色向右渐变 */
+      background: linear-gradient(to right,
+          rgb(255, 255, 255), skyblue)
+        /* 不可重复 */
+        no-repeat left;
+      /* 设置背景的宽度为 0px ，高度为 40px */
+      background-size: 0px 50px;
+      /* 设置bgs的过渡的时间 */
+      transition: .7s;
+
+      img {
+        position: relative;
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+      }
+
+      span {
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        position: relative;
+        float: left;
+        margin: 0 0 0 20px;
+        width: 100px;
+        height: 30px;
+        border-radius: 4px;
+      }
+    }
+
+    .everyCard:hover {
+      /* 设置鼠标悬停时bg元素x轴即水平方向的位置，效果为从左侧开始向右侧延申 */
+      background-position-x: left;
+      /* 设置鼠标悬停时bg的宽为span的宽度 100% , 高度为2px */
+      background-size: 100% 50px;
+    }
+
+    .myHistory {
+      transition: 0.5s;
+      /* margin: 0px 10px; */
+      align-content: center;
+      font-size: 14px;
+      color: grey;
+      position: absolute;
+      display: block;
+      width: calc(100% - 40px);
+      height: 40px;
+      bottom: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+
+      span {
+        position: absolute;
+        margin: 10px 0px 0px 0px;
+        height: 20px;
+      }
+
+      span:hover {
+        position: absolute;
+        margin: 10px 0px 0px 0px;
+        height: 20px;
+      }
+
+      img {
+        margin: 13px 10px 13px 10px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    .myHistory:hover {
+      background-color: #ddd;
+    }
+
+  }
+
+  .userMsg {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 800px);
+    left: 50%;
+    transform: translate(-50%);
+
+    .msg-footer {
+      position: relative;
+      height: 40px;
+      padding: 10px;
+      top: 80px;
+      list-style: none;
+      text-decoration: none;
+      color: #000;
+
+      .userimg {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        float: left;
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        margin: 2px;
+        object-fit: cover;
+      }
+  
+      .footer-user {
+        width: 120px;
+        padding: 0 0 0 8px;
+        position: relative;
+        float: left;
+        height: 36px;
+
+        .username {
+          position: relative;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        .useremail {
+          position: relative;
+          display: inline-block;
+          font-size: 12px;
+          color: #ccc;
+        }
+      }
+    }
+  }
+}

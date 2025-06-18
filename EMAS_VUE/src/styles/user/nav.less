@@ -1,0 +1,119 @@
+// 深度选择器去掉超链接属性标签的默认样式
+::v-deep a {
+  text-decoration: none; /* 移除下划线 */
+  color: inherit; /* 继承父元素的颜色 */
+}
+.nav {
+  position: relative;
+  height: 50px;
+  background-color: #fff;
+
+  .logo-nav {
+    position: absolute;
+    width: 400px;
+    height: 38px;
+    left: 200px;
+    top: 6px;
+    background: url(../../assets/home/nav/navLogo.png) center no-repeat;
+    background-size: contain;
+  }
+
+  .text-nav {
+    position: absolute;
+    width: 1000px;
+    height: 50px;
+    left: 550px;
+
+    li {
+      margin: auto 16px;
+      list-style: none;
+      cursor: pointer;
+      float: left;
+      height: 50px;
+      align-content: center;
+      text-align: center;
+      letter-spacing: 1.5px;
+
+      /* 设置span的背景颜色向右渐变 */
+      background: linear-gradient(to left,
+          rgb(48, 96, 185), rgb(48, 96, 185))
+        /* 不可重复 */
+        no-repeat center
+        /* 位置靠下 */
+        bottom;
+      /* 设置背景的宽度为 0px ，高度为 2px */
+      background-size: 0px 4px;
+      /* 设置bgs的过渡的时间 */
+      transition: background-size 500ms;
+    }
+
+    a, .router-link-active {
+      text-decoration: none;
+      height: 50px;
+      font-size: 18px;
+    }
+
+    #li1,
+    li:hover {
+      /* 设置鼠标悬停时bg元素x轴即水平方向的位置，效果为从左侧开始向右侧延申 */
+      background-position-x: center;
+      /* 设置鼠标悬停时bg的宽为span的宽度 100% , 高度为2px */
+      background-size: 100% 4px;
+    }
+  }
+
+  .user {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 1400px;
+
+    .userimg {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: relative;
+      float: left;
+      width: 40px;
+      height: 40px;
+      margin: 5px 0;
+      border-radius: 50%;
+    }
+
+    .logined {
+      position: relative;
+      float: right;
+      cursor: pointer;
+      color: #000;
+      width: 100px;
+      height: 50px;
+      align-content: center;
+    }
+
+    .userSelect {
+      transition: 0.9s;
+      position: relative;
+      float: right;
+      width: 110px;
+      height: 80px;
+      background-color: #fff;
+      z-index: 1;
+      display: none;
+
+      .userHome, .userExit {
+        line-height: 40px;
+        text-align: center;
+        align-content: center;
+        cursor: pointer;
+
+        i {
+          margin-right: 5px;
+        }
+      }
+
+      .userHome:hover, .userExit:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}

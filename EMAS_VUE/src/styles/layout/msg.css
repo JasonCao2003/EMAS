@@ -1,0 +1,81 @@
+/* 用户内容 */
+.myMsg{
+    transition: 1s;
+    overflow: hidden;
+    background-color: #eee;
+    position: absolute;
+    width: 20%;
+    height: 95%;
+    float: right;
+    top: 2%;
+    right: 1%;
+    border-radius: 30px;
+    border: 5px solid skyblue;
+}
+.userDo{
+    background-color: #fff;
+    position: relative;
+    height: 60px;
+    border-radius: 30px;
+}
+.userDo img{
+    cursor: auto;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.username{
+    align-content: center;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 80px;
+    font-size: 22px;
+    font-weight: 600;
+    width: 200px;
+    height: 40px;
+}
+
+
+
+/* 图 */
+#emoCharts{
+    /* background-color: black; */
+    width: 100%;
+    height: 400px;
+    display: block;
+    position: relative;
+    top: 0;
+    transition: 1s;
+}
+
+
+
+/* 缩小按钮 */
+.shrinkBtn{
+    transition: 0.8s;
+    cursor: pointer;
+    background-color: skyblue;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    width: 100px;
+    height: 60px;
+    border-radius: 30px 0px 20px 0px;
+    bottom: 0;
+    right: 0;
+}
+.shrinkBtn:hover{
+    transition: 0.8s;
+    color: rgb(0, 183, 255);
+    background-color: #fff;
+    border-top: none;
+    border-left: none;
+    border-top: 5px solid skyblue;
+    border-left: 5px solid skyblue;
+    border-radius: 30px 0px 20px 0px;
+}

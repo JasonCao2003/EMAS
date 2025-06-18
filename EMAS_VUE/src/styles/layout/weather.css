@@ -1,0 +1,105 @@
+/* 整体设置 */
+.weather{
+  color: #FFFFFF;
+  height: 300px;
+  background-image: linear-gradient(to right, #50B1FF, #1F57D6);
+}
+/* 顶部 */
+.top-box {
+  display: flex;
+  padding: 30px 50px;
+  justify-content: space-between;
+}
+
+/* 日期 */
+.top-box .title .data {
+  color: white;
+  margin-right: 20px;
+}
+
+/* 农历 */
+.top-box .title .calendar {
+  opacity: .72;
+}
+
+/* 当前天气 */
+.weather-box {
+  display: flex;
+  padding-left: 50px;
+  align-items: flex-end;
+}
+
+.weather-box .tem-box {
+  margin-right: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-box .tem-box .temp span {
+  font-size: 90px;
+  display: inline-block;
+  height: 100px;
+  margin-bottom: 10px;
+  line-height: 100px;
+}
+
+.climate-box .air {
+  display: inline;
+  padding: 5px 10px;
+  height: 32px;
+  border-radius: 16px;
+  background: #65D45A;
+  text-align: center;
+  line-height: 32px;
+  font-family: PingFangSC-Medium;
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.climate-box .weather-list {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 21px;
+  margin-bottom: 28px;
+}
+
+.climate-box .weather-list li img {
+  width: 20px;
+  height: 20px;
+}
+
+.climate-box .weather-list li {
+  margin-right: 20px;
+}
+
+.climate-box .weather-list li,
+.climate-box .weather-list span {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* 今日详细天气 */
+.today-weather {
+  display: flex;
+  padding-left: 50px;
+  height: 50px;
+}
+
+.today-weather .range-box,
+.today-weather .range {
+  font-size: 16px;
+}
+
+.today-weather .sun-list {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.today-weather .sun-list li {
+  font-size: 16px;
+  margin-right: 42px;
+}

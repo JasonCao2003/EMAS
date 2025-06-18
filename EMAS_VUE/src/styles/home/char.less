@@ -1,0 +1,479 @@
+.web-characteristic {
+  background-color: #fff;
+  width: 100%;
+  height: 680px;
+  padding: 80px 100px;
+  position: relative;
+
+  // 选项栏
+  .classify {
+    // background-color: pink;
+    position: relative;
+    width: 1280px;
+    height: 120px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    li {
+      cursor: pointer;
+      list-style: none;
+      width: 25%;
+      min-width: 200px;
+      height: 100%;
+      position: relative;
+      float: left;
+      line-height: 40px;
+      align-content: center;
+      font-size: 20px;
+    }
+
+    .active {
+      border-bottom: 2px solid orange;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  // 展示栏
+  .classify-show {
+    position: relative;
+    width: 1280px;
+    height: 400px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 0px 0;
+
+    // background-color: pink;
+    // 先给所有展示栏赋予不显示
+    ul {
+      // 互动对话
+      .Interactive-conversations {
+        display: block;
+        height: 400px;
+        // background-color: pink;
+
+        .eveImg {
+          width: 1280px;
+          height: 100%;
+          position: relative;
+
+          .image {
+            margin: 0 2%;
+            width: 21%;
+            height: 400px;
+            position: relative;
+            display: inline-block;
+
+            img {
+              width: 100%;
+              height: 360px;
+              position: absolute;
+              bottom: 0;
+              transition: 0.8s;
+            }
+
+            img:hover {
+              height: 380px;
+              transition: 0.8s;
+            }
+
+            span {
+              color: #fff;
+              font-size: 20px;
+              font-weight: 600;
+              position: absolute;
+              bottom: 16%;
+              left: 10%;
+            }
+          }
+        }
+      }
+
+      // 天气指南
+      .Weather-guide {
+        height: 980px;
+        background-image: linear-gradient(135deg, #50B1FF 0%, #1F57D6 100%);
+
+        * {
+          box-sizing: border-box;
+          font-size: 18px;
+          color: white;
+        }
+
+        body,
+        ul,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+          padding: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: 100%;
+          font-weight: normal;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        ul {
+          list-style: none;
+        }
+
+        img {
+          border: 0px;
+        }
+
+        input {
+          appearance: none;
+          outline: none;
+        }
+
+        input::-webkit-input-placeholder {
+          /* WebKit, Blink, Edge */
+
+          color: #E6EBFF;
+
+        }
+
+        :-moz-placeholder {
+          /* Mozilla Firefox 4 to 18 */
+
+          color: #E6EBFF;
+
+        }
+
+        ::-moz-placeholder {
+          /* Mozilla Firefox 19+ */
+
+          color: #E6EBFF;
+
+        }
+
+        input:-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+
+          color: #E6EBFF;
+
+        }
+
+        input::-ms-input-placeholder {
+          /* Microsoft Edge */
+
+          color: #E6EBFF;
+
+        }
+
+        /* 清除浮动，解决margin-top塌陷 */
+        .clearfix:before,
+        .clearfix:after {
+          content: '';
+          display: table;
+        }
+
+        .clearfix:after {
+          clear: both;
+        }
+
+        .clearfix {
+          zoom: 1;
+        }
+
+        .fl {
+          float: left;
+        }
+
+        .fr {
+          float: right;
+        }
+
+        /* 顶部 */
+        .top-box {
+          display: flex;
+          padding: 50px;
+          justify-content: space-between;
+
+          .title {
+
+            /* 日期 */
+            .data {
+              color: white;
+              margin-right: 20px;
+            }
+
+            /* 农历 */
+            .calendar {
+              opacity: .72;
+            }
+          }
+
+          /* 搜索区域 */
+          .search-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .location {
+              display: flex;
+              align-items: center;
+              margin-right: 20px;
+              font-size: 16px;
+
+              img {
+                width: 20px;
+                height: 20px;
+                margin-right: 7.1px;
+              }
+            }
+
+            .search {
+              position: relative;
+
+              .search-city {
+                width: 234px;
+                height: 32px;
+                border: none;
+                border-radius: 16px;
+                padding-left: 10px;
+                background-color: rgba(255, 255, 255, .2);
+                color: white;
+                font-size: 14px;
+              }
+
+              /* 搜索列表 */
+              .search-list {
+                width: 100%;
+                height: 200px;
+                overflow-y: scroll;
+                background-color: #fff;
+                position: absolute;
+                left: 0;
+                top: 40px;
+                display: none;
+              }
+
+              .search-list.show {
+                display: block;
+              }
+
+              .search-list::-webkit-scrollbar {
+                display: none;
+              }
+
+              .search-list li {
+                color: black;
+                font-size: 14px;
+                padding: 15px 10px;
+              }
+
+              .search-list li:hover {
+                background-color: lightgray;
+              }
+            }
+          }
+        }
+
+
+
+        /* 当前天气 */
+        .weather-box {
+          display: flex;
+          padding-left: 50px;
+          align-items: flex-end;
+
+          .tem-box {
+            margin-right: 42px;
+            display: flex;
+            flex-direction: column;
+
+            .temp span {
+              font-size: 90px;
+              display: inline-block;
+              height: 100px;
+              margin-bottom: 10px;
+              line-height: 100px;
+            }
+          }
+
+          .climate-box .air {
+            display: inline;
+            padding: 5px 10px;
+            height: 32px;
+            border-radius: 16px;
+            background: #65D45A;
+            text-align: center;
+            line-height: 32px;
+            font-family: PingFangSC-Medium;
+            font-size: 18px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            font-weight: 500;
+          }
+
+          .climate-box .weather-list {
+            display: flex;
+            align-items: flex-end;
+            margin-top: 21px;
+            margin-bottom: 28px;
+
+            li {
+              display: flex;
+              align-items: center;
+              font-size: 16px;
+              margin-right: 20px;
+
+              img {
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            span {
+              display: flex;
+              align-items: center;
+              font-size: 16px;
+            }
+          }
+
+        }
+
+
+        /* 今日详细天气 */
+        .today-weather {
+          display: flex;
+          padding-left: 50px;
+
+          .range-box {
+            font-size: 16px;
+
+            .range {
+              font-size: 16px;
+            }
+          }
+
+          .sun-list {
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+
+            li {
+              font-size: 16px;
+              margin-right: 42px;
+            }
+          }
+        }
+
+
+        /* 周天气预报 */
+        .week-weather-box {
+          height: 382px;
+          border-radius: 10px;
+          background-color: #fff;
+          width: 1039px;
+          margin: 30px auto;
+          padding: 30px;
+
+          .title {
+            font-size: 20px;
+            color: #3A475A;
+            letter-spacing: 0;
+            font-weight: 600;
+          }
+
+          /* 列表 */
+          .week-wrap {
+            display: flex;
+            margin: 0 auto;
+            margin-top: 30px;
+
+            .item {
+              width: 150px;
+              height: 254px;
+              cursor: pointer;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding-top: 30px;
+
+              span {
+                color: #393F48;
+              }
+
+              .date-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 4px;
+
+                .dateFormat {
+                  font-size: 16px;
+                  color: #393F48;
+                  letter-spacing: 0;
+                  text-align: center;
+                  font-weight: 400;
+                }
+
+                .date {
+                  font-size: 16px;
+                  color: #88909D;
+                  letter-spacing: 0;
+                  text-align: center;
+                  font-weight: 400;
+                }
+              }
+
+              img {
+                width: 46px;
+                height: 46px;
+                margin: 12px 0 12px;
+              }
+
+              .weather {
+                font-size: 16px;
+                color: #393F48;
+                letter-spacing: 0;
+                text-align: center;
+                font-weight: 400;
+                margin-bottom: 4px;
+              }
+
+              .temp {
+                font-size: 14px;
+                color: #393F48;
+                letter-spacing: 0;
+                text-align: center;
+                font-weight: 500;
+                margin-bottom: 10px;
+              }
+
+              .wind span {
+                font-size: 14px;
+                color: #676C74;
+                letter-spacing: 0;
+                text-align: center;
+                font-weight: 400;
+              }
+            }
+
+            .item:hover {
+              background: #F7FAFF;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
