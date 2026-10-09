@@ -1,0 +1,120 @@
+# ============================================================
+# EMAS · 情绪分析助手  —  全局 .gitignore
+# ============================================================
+
+# ---------- 操作系统 ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------- 编辑器 / IDE ----------
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.history/
+*.bak
+*.orig
+*.tmp
+
+# ---------- Java (Spring Boot / Maven) ----------
+EMAS_JAVA/**/target/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+hs_err_pid*
+replay_pid*
+.mtj.tmp/
+
+# ---------- Python (AI 服务 / Flask / Jupyter) ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb.bak
+
+# 模型权重 / 训练产物（体积较大，建议用 Git LFS 或独立存储）
+*.pt
+*.pth
+*.onnx
+*.h5
+*.ckpt
+*.safetensors
+runs/
+outputs/
+checkpoints/
+weights/
+
+# ---------- Node / Vue ----------
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm
+.yarn
+.pnp.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+
+# ---------- 环境变量 / 敏感配置 ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*secret*
+*credential*
+
+# 注意：EMAS_JAVA 内的 application.yml 含数据库/邮箱账号口令，
+# 请勿把真实口令提交到仓库，建议改用环境变量或配置模板。
+
+# ---------- 运行时数据 / 上传文件 ----------
+EMAS_PY/Downloads/
+uploads/
+logs/
+*.log
